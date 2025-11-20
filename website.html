@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Radar</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: linear-gradient(120deg, #74b9ff, #a29bfe);
+        }
+
+        header {
+            background: #6a11cb;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            background: linear-gradient(120deg, #a29bfe, #6a11cb);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .cta-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4a0e9e;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-buttons button:hover {
+            background-color: #34116b;
+        }
+
+        /* Interactive Boxes Section */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #f7f9fc;
+        }
+
+        .box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(116, 185, 255, 0.1);
+            transform: rotate(45deg);
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .box:hover::before {
+            background: rgba(162, 155, 254, 0.15);
+        }
+
+        .box h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #2d3436;
+        }
+
+        .box p {
+            font-size: 1em;
+            color: #636e72;
+            margin: 0 0 15px;
+        }
+
+        .box button {
+            padding: 10px 20px;
+            background: #74b9ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+        .box button:hover {
+            background: #0984e3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6a11cb;
+            color: white;
+        }
+
+        footer .social-media a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .social-media a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Disease Radar 🩺</div>
+        <nav>
+            <ul>
+                <li><a href="frontwebpage.html">Home</a></li>
+                <li><a href="#interactive-boxes">Interactive Tools</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Stay Ahead of Your Health with Disease Radar</h1>
+        <p>Identify symptoms, explore potential conditions, and take charge of your well-being in just a few clicks.</p>
+        <div class="cta-buttons">
+            <a href="symptomcheck.html" ><button onclick="alert('Start Now!')">Start Now</button></a>
+        </div>
+    </section>
+
+    <section class="container" id="interactive-boxes">
+        <div class="box" onclick="startConsultation()">
+            <h3>Doctor Consultation</h3>
+            <p>Talk to a doctor online.</p>
+            <a href="hospitallists.html"><button>Start Now</button></a>
+        </div>
+        <div class="box" onclick="findNearestHospital()">
+            <h3>Nearest Hospital</h3>
+            <p>Locate hospitals near you.</p>
+            <a href="drecom.html"><button>Find Now</button></a>
+        </div>
+        <div class="box" onclick="checkSymptoms()">
+            <h3>Symptoms Checker</h3>
+            <p>Find possible conditions based on your symptoms.</p>
+            <a href="symptomcheck.html"><button>Check Symptoms</button></a>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Disease Radar. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        function startConsultation() {
+            alert('Redirecting to doctor consultation...');
+        }
+
+        function findNearestHospital() {
+            alert('Searching for nearest hospitals...');
+        }
+
+        function checkSymptoms() {
+            alert('Opening symptoms checker...');
+        }
+    </script>
+</body>
+</html>

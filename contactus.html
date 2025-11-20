@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Radar - Contact Us</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6f00 30%, #333 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Container with shadow and rounded corners */
+        .container {
+            width: 80%;
+            max-width: 800px;
+            padding: 30px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        /* Title with gradient text effect */
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff6f00, #ffa726);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* General contact section styling */
+        .contact-section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: #444;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Contact information with hover effects */
+        .contact-info {
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect for contact info */
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon styling */
+        .contact-info i {
+            font-size: 28px;
+            color: #ff6f00;
+            margin-right: 20px;
+        }
+
+        /* Contact information text */
+        .contact-info p {
+            color: #555;
+            font-size: 1.1em;
+            margin: 0;
+        }
+
+        /* Link styling for email with hover effect */
+        .contact-info a {
+            color: #ff6f00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ff3d00;
+        }
+
+        /* Footer with fixed design */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ff6f00;
+            color: #fff;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Animation effect for container */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Disease Radar Content Box -->
+    <div class="container">
+        <h1>Disease Radar</h1>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>For all types of queries</p>
+        </div>
+
+        <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <h2>Location:</h2>
+                <p>Bennett University, Greater Noida</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+                <h2>For Queries Contact Us:</h2>
+                <p>Phone No.: 9508381511</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <h2>For Feedback/Complaints Please Write To:</h2>
+                <p>Email: <a href="mailto:dkuntal053@gmail.com">dkuntal053@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2024 Disease Radar. All rights reserved.
+    </div>
+</body>
+</html>

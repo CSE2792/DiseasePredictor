@@ -195,8 +195,6 @@ Frontend → Node.js → Flask → ML Model
 
 ---
 
-If you want, I can paste this directly into your full README for you.
-
 
 ---
 

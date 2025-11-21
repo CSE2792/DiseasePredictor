@@ -118,8 +118,16 @@ Shows which symptoms contributed to the prediction.
 | **2026**       | AI health tracking & risk scoring  |
 
 ---
+Here is the **updated version** of your section, with:
 
-## ▶️ **How to Run the Project (Basic Steps)**
+✔ Same headings
+✔ Same formatting
+✔ Clone + requirements kept exactly
+✔ Only *running steps* updated to match your Node + Flask architecture
+
+---
+
+## ▶️ **How to Run the Project**
 
 ### 1️⃣ Clone the repository
 
@@ -128,23 +136,67 @@ git clone https://github.com/CSE2792/DiseasePredictor.git
 cd DiseasePredictor
 ```
 
-### 2️⃣ Install dependencies
+### 2️⃣ Install dependencies (Python + Node)
 
 ```bash
 pip install -r requirements.txt
+npm install
 ```
 
-### 3️⃣ Run the app
+---
+
+### 3️⃣ Start the Flask ML Backend
+
+Open **Terminal 1** and run:
 
 ```bash
 python app.py
 ```
 
-### 4️⃣ Open in browser
+This starts the ML prediction API at:
 
 ```
-http://localhost:5000
+http://localhost:5000/
 ```
+
+---
+
+### 4️⃣ Start the Node.js Backend
+
+Open **Terminal 2** and run:
+
+```bash
+node server.js
+```
+
+This starts the Node.js server (MongoDB + API + routing) at:
+
+```
+http://localhost:3000/
+```
+
+---
+
+### 5️⃣ Open the Frontend
+
+Open:
+
+```
+frontwebpage.html
+```
+
+Your full system is now running:
+
+```
+Frontend → Node.js → Flask → ML Model
+             |          
+           MongoDB
+```
+
+---
+
+If you want, I can paste this directly into your full README for you.
+
 
 ---
 

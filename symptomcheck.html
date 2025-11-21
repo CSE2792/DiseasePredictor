@@ -677,7 +677,7 @@ const allSymptoms = [
 ];
 
 
-let selected = ["Fever"];
+let selected = [""];
 
 /*-------------------------
   AUTO SUGGESTIONS
@@ -733,6 +733,8 @@ function renderTags() {
   selectedArea.innerHTML = "";
 
   selected.forEach(sym => {
+    if (!sym) return;   // ⛔ Skip null, undefined, empty    
+    
     const span = document.createElement("span");
     span.className = "tag";
     span.style.animation = "fadeIn 0.25s";

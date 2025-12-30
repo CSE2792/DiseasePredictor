@@ -112,18 +112,10 @@ Shows which symptoms contributed to the prediction.
 
 | Year           | Plan                               |
 | -------------- | ---------------------------------- |
-| **Q1–Q2 2025** | Telemedicine & EHR integration     |
-| **Q3 2025**    | One-click nearest hospital locator |
-| **Q4 2025**    | Multilingual support               |
-| **2026**       | AI health tracking & risk scoring  |
-
----
-Here is the **updated version** of your section, with:
-
-✔ Same headings
-✔ Same formatting
-✔ Clone + requirements kept exactly
-✔ Only *running steps* updated to match your Node + Flask architecture
+| **Q1–Q2 2026** | Telemedicine & EHR integration     |
+| **Q3 2026**    | One-click nearest hospital locator |
+| **Q4 2026**    | Multilingual support               |
+| **2027**       | AI health tracking & risk scoring  |
 
 ---
 
